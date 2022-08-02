@@ -30,10 +30,12 @@ dependencies {
 	runtimeOnly("com.h2database:h2")
 	// runtimeOnly("org.postgresql:postgresql")
 
-	// tests
+	// tests dependencies
 	// testImplementation makes it in scope of the test environment
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.boot:spring-boot-starter-webflux")
+	testImplementation("io.mockk:mockk:1.12.4")
+	testImplementation("com.ninja-squad:springmockk:3.1.1")
 }
 
 tasks.withType<KotlinCompile> {

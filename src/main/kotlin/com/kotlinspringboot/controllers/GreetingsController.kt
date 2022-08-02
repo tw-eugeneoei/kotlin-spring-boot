@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping("/v1/greetings") // any endpoints build under this class will have this base class
-class GreetingController(val greetingService: GreetingService) {
+class GreetingsController(val greetingService: GreetingService) {
 
     companion object : KLogging()
 
