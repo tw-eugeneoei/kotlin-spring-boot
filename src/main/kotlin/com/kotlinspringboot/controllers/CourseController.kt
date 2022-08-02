@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping("/courses")
-class CoursesController(val courseService: CourseService) {
+class CourseController(val courseService: CourseService) {
 
     @PostMapping("")
     @ResponseStatus(HttpStatus.CREATED)

@@ -16,7 +16,7 @@ import org.springframework.test.web.reactive.server.WebTestClient
 // will scan controllers and identify all endpoints and make them available to WebTestClient instance
 // will also automatically detect port number service is running
 @AutoConfigureWebTestClient
-class GreetingsControllerIntegrationTest {
+class GreetingControllerIntegrationTest {
 
     @Autowired
     // lateinit => allow value to be initialised by framework

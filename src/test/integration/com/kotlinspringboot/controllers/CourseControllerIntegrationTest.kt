@@ -12,7 +12,7 @@ import org.springframework.test.web.reactive.server.WebTestClient
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @ActiveProfiles("test")
 @AutoConfigureWebTestClient
-class CoursesControllerIntegrationTest {
+class CourseControllerIntegrationTest {
     @Autowired
     lateinit var webTestClient: WebTestClient
 

@@ -10,9 +10,9 @@ import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWeb
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest
 import org.springframework.test.web.reactive.server.WebTestClient
 
-@WebMvcTest(controllers = [GreetingsController::class])
+@WebMvcTest(controllers = [GreetingController::class])
 @AutoConfigureWebTestClient
-class GreetingsControllerUnitTest {
+class GreetingControllerUnitTest {
     @Autowired
     lateinit var webTestClient: WebTestClient
 
