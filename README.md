@@ -1,4 +1,4 @@
-# Kotling Spring Boot
+# Kotlin Spring Boot
 
 - Course catalog service
 - Rest API to manage course catalog for an online learning platform
