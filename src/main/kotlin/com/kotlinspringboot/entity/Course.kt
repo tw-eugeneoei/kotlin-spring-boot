@@ -3,6 +3,7 @@ package com.kotlinspringboot.entity
 import javax.persistence.*
 
 // hold data for representing entity object to process data into the DB
+// ie entity is the model
 @Entity
 @Table(name = "Courses")
 data class Course(
