@@ -1,4 +1,17 @@
 spring:
   application:
     name: course-catalog-service
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    database: h2
+    database-platform: org.hibernate.dialect.H2Dialect
+    generate-ddl: true # automatically creates DB and tables for each entity (if each does not exist)
+    show-sql: true # displays sql statements on console. set false in prod.
+  h2:
+    console:
+      enabled: true # provides UI to interact with DB
 message: Hello from default profile
