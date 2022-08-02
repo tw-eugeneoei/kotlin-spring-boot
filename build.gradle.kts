@@ -29,7 +29,11 @@ dependencies {
 
 	runtimeOnly("com.h2database:h2")
 	// runtimeOnly("org.postgresql:postgresql")
+
+	// tests
+	// testImplementation makes it in scope of the test environment
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	testImplementation("org.springframework.boot:spring-boot-starter-webflux")
 }
 
 tasks.withType<KotlinCompile> {
