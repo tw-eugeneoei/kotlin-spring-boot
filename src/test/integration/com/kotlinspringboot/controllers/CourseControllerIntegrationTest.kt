@@ -17,7 +17,7 @@ class CourseControllerIntegrationTest {
     lateinit var webTestClient: WebTestClient
 
     @Test
-    fun create() {
+    fun `should create new course`() {
         val course = CourseDto(null, "my course", "my course category")
         val expected = CourseDto(1, "my course", "my course category")
 
