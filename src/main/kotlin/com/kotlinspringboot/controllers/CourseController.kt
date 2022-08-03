@@ -3,6 +3,7 @@ package com.kotlinspringboot.controllers
 import com.kotlinspringboot.dto.CourseDto
 import com.kotlinspringboot.services.CourseService
 import org.springframework.http.HttpStatus
+import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
@@ -18,5 +19,10 @@ class CourseController(val courseService: CourseService) {
     // @RequestBody parses request body and maps it to CourseDTO
     fun create(@RequestBody course: CourseDto): CourseDto {
         return courseService.create(course)
+    }
+
+    @GetMapping("")
+    fun getAll(): List<CourseDto> {
+        return courseService.getAll()
     }
 }

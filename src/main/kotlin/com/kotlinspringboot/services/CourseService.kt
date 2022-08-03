@@ -3,7 +3,6 @@ package com.kotlinspringboot.services
 import com.kotlinspringboot.dto.CourseDto
 import com.kotlinspringboot.entity.Course
 import com.kotlinspringboot.repositories.CourseRepository
-import mu.KLogger
 import mu.KLogging
 import org.springframework.stereotype.Service
 
@@ -24,6 +23,16 @@ class CourseService(val courseRepository: CourseRepository) {
         courseRepository.save(entity)
         logger.info("Saved course: $entity")
         return entity.let {
+            CourseDto(
+                it.id,
+                it.name,
+                it.category
+            )
+        }
+    }
+
+    fun getAll(): List<CourseDto> {
+        return courseRepository.findAll().map {
             CourseDto(
                 it.id,
                 it.name,
